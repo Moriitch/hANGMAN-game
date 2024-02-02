@@ -100,7 +100,7 @@ def play(word):
     guessed_letters = []  # список уже названных букв
     guessed_words = []  # список уже названных слов
     tries = 6  # количество попыток
-    print("Let's play, HANGMAN!!!!!!! :))")
+    print("Начинаем игру!")
     print(display_hangman(tries))
     print(word_completion)
     print("В загаданном слове ", len(word_completion), ' букв ')
@@ -180,15 +180,15 @@ def play(word):
         print("УРА!! ВЫ УГАДАЛИ СЛОВО!!")
     elif word_completion != word:
         print(display_hangman(tries))
-        print('К сожалению, вы не угадали :(( Слово, которое было загадано: ', word)
+        print('К сожалению, вы не угадали :( Слово, которое было загадано: ', word)
     elif letter != word:
         print(display_hangman(tries))
-        print('К сожалению, вы не угадали :(( Слово, которое было загадано: ', word)
+        print('К сожалению, вы не угадали :( Слово, которое было загадано: ', word)
 
 gaym = True
 while gaym == True:
     a = play(get_list())
-    print("Wanna PLAY aGAYn??? ;)")
+    print("Хотите сыграть снова?")
     print('д - да, н - нет')
     answ = input()
     if answ == 'д':
